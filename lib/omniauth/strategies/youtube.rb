@@ -26,12 +26,10 @@ module OmniAuth
       # or as a URI parameter). This may not be possible with all
       # providers.
       
-      p "==========before uid"
       uid { user['id']['$t'] }
 
       info do
         {
-          p "========with in info block"
           'uid' => user['id']['$t'],
           'nickname' => user['author'].first['name']['$t'],
           'first_name' => user['yt$firstName'] && user['yt$firstName']['$t'],
